@@ -1,0 +1,83 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000aaff;
+    
+}
+
+.page-holder, .header-content {
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.header-content {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu{
+    display: flex;
+}
+
+.page-holder {
+    display: flex;
+    margin-top: 88px;
+}
+
+.stories-holder {
+    max-width: 603px;
+    height: 118px;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    margin-bottom: 24px;
+    background-color: #00ff00aa;
+    overflow: hidden;
+}
+
+.stories-post {
+    margin: 0 7px; 
+    background-image: url("public/stories_background.jpg");
+    background-size: cover;
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.feed-holder {
+    max-width: 614px;
+}
+
+.feed-post {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.feed-holder img {
+    width: 100%;
+    display: block;
+}
+
+.feed-account {
+    height: 61px;
+    background-color: #ff0000aa
+}
+
+.feed-info {
+    height: 76px;
+    background-color: #ff0000aa
+}
+
+aside {
+    position: fixed;
+    margin-left: 642px;
+    width: 293px
+}
