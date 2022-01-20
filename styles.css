@@ -1,10 +1,15 @@
+body {
+    background-color: #fafafa
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #0000aaff;
-    
+    background-color: #ffffff;
+    z-index: 1;
+    border-bottom: 1px solid #dbdbdb
 }
 
 .page-holder, .header-content {
@@ -12,35 +17,72 @@ header {
     margin: 0 auto;
 }
 
-.header-content {
+.header-content, .header-mobile {
     height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 18px
 }
 
-.header-menu{
+.header-mobile {
+    display: none;
+}
+
+.header-menu ion-icon {
+    margin-left: 25px;
+}
+
+ion-icon {
+    --ionicon-stroke-width: 40px;
+}
+
+.header-logo {
     display: flex;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+}
+
+header input {
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+header input::placeholder {
+    text-align: center
 }
 
 .page-holder {
     display: flex;
-    margin-top: 88px;
+    margin-top: 54px;
 }
 
 .stories-holder {
+    width: 100%;
     max-width: 603px;
     height: 118px;
     display: flex;
     align-items: center;
     padding-left: 11px;
-    margin-bottom: 24px;
-    background-color: #00ff00aa;
+    margin: 34px 0 24px 0;
+    background-color: #ffffff;
     overflow: hidden;
+    border: 1px solid #dbdbdb
 }
 
 .stories-post {
     margin: 0 7px; 
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.stories-post div {
     background-image: url("public/stories_background.jpg");
     background-size: cover;
     height: 66px;
@@ -49,16 +91,36 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+}
+
+.stories-post img {
+    width: 56px;
+    border-radius: 50%;
+}
+
+.stories-holder button {
+    position: absolute;
+    z-index: 0;
+    margin-left: 569px;
+    display: flex;
+    align-items: center;
+    background-color: #00000000;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-style: none;
 }
 
 .feed-holder {
+    /* width: 100%; */
     max-width: 614px;
 }
 
 .feed-post {
     width: 100%;
     margin-bottom: 60px;
+    border: 1px solid #dbdbdb
 }
 
 .feed-holder img {
@@ -68,16 +130,71 @@ header {
 
 .feed-account {
     height: 61px;
-    background-color: #ff0000aa
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px
+}
+
+.feed-account div {
+    display: flex;
+}
+
+.feed-account img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.feed-account p {
+    margin: auto 15px;
 }
 
 .feed-info {
     height: 76px;
-    background-color: #ff0000aa
+    font-size: 17px;
 }
 
 aside {
     position: fixed;
     margin-left: 642px;
-    width: 293px
+    width: 293px;
+    height: 200px;
+    background-color: #555555;
+    margin-top: 34px;
+}
+
+@media (max-width: 935px) {
+    aside {
+        display: none
+    }
+    .page-holder {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 614px) {
+    .page-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stories-holder {
+        margin: 0;
+        border: none;
+        background-color: #00000000;
+    }
+
+    .stories-holder button {
+        display: none
+    }
+
+    .header-content {
+        display: none
+    }
+
+    .header-mobile {
+        display: flex
+    }
 }
