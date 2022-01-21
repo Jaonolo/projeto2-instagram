@@ -1,55 +1,80 @@
-body {
-    background-color: #fafafa
+:root {
+    box-sizing: border-box;
 }
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif
+}
+
+/* 
+===================
+    Divisória 1    
+===================
+*/
+
+body, input {
+    background-color: #fafafa;
+}
+
+header, .stories-holder, .feed-post {
+    background-color: #ffffff;
+}
+
+/* border color */
+
+/*
+===================
+    Divisória 2    
+===================
+*/
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #ffffff;
     z-index: 1;
-    border-bottom: 1px solid #dbdbdb
+
+    width: 100%;
+    padding: 0 20px;
+
+    border-bottom: 1px solid #dbdbdb;
 }
 
-.page-holder, .header-content {
+.header-content, .page-holder {
     max-width: 935px;
     margin: 0 auto;
 }
 
+/* duas classes ou uma? */
 .header-content, .header-mobile {
     height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px
+    font-size: 24px
 }
 
-.header-mobile {
-    display: none;
-}
-
-.header-menu ion-icon {
-    margin-left: 25px;
-}
-
-ion-icon {
-    --ionicon-stroke-width: 40px;
-}
-
+/* offset logo? */
 .header-logo {
     display: flex;
     align-items: center;
 }
 
-.header-menu {
-    display: flex;
+.vertical-separator {
+    width: 1px;
+    height: 22px;
+    margin: 0 10px;
+    background-color: #dbdbdb
 }
 
 header input {
     width: 215px;
     height: 28px;
-    background-color: #FAFAFA;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
 }
@@ -58,6 +83,17 @@ header input::placeholder {
     text-align: center
 }
 
+.header-menu {
+    display: flex;
+    gap: 24px
+}
+
+ion-icon {
+    --ionicon-stroke-width: 40px;
+}
+
+/*=========================*/
+
 .page-holder {
     display: flex;
     margin-top: 54px;
@@ -65,19 +101,18 @@ header input::placeholder {
 
 .stories-holder {
     width: 100%;
-    max-width: 603px;
+    max-width: 614px;
     height: 118px;
     display: flex;
+    gap: 14px;
     align-items: center;
-    padding-left: 11px;
+    padding-left: 18px;
     margin: 34px 0 24px 0;
-    background-color: #ffffff;
     overflow: hidden;
-    border: 1px solid #dbdbdb
+    border: 1px solid #dbdbdb;
 }
 
 .stories-post {
-    margin: 0 7px; 
     text-align: center;
     flex-shrink: 0;
 }
@@ -93,7 +128,7 @@ header input::placeholder {
     align-items: center;
 }
 
-.stories-post img {
+.stories-post img, .aside-account img, aside img, .feed-info img {
     width: 56px;
     border-radius: 50%;
 }
@@ -104,7 +139,7 @@ header input::placeholder {
     margin-left: 569px;
     display: flex;
     align-items: center;
-    background-color: #00000000;
+    background-color: #000000;
     border-radius: 50%;
     width: 26px;
     height: 26px;
@@ -113,19 +148,18 @@ header input::placeholder {
 }
 
 .feed-holder {
-    /* width: 100%; */
     max-width: 614px;
+}
+
+.feed-holder img {
+    width: 100%;
+    display: block;
 }
 
 .feed-post {
     width: 100%;
     margin-bottom: 60px;
     border: 1px solid #dbdbdb
-}
-
-.feed-holder img {
-    width: 100%;
-    display: block;
 }
 
 .feed-account {
@@ -152,16 +186,54 @@ header input::placeholder {
 .feed-info {
     height: 76px;
     font-size: 17px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feed-info > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-info img {
+    width: 20px;
 }
 
 aside {
     position: fixed;
     margin-left: 642px;
     width: 293px;
-    height: 200px;
-    background-color: #555555;
     margin-top: 34px;
+    display: flex;
+    flex-direction: column;
 }
+
+aside div {
+    display: flex;
+    align-items: center;
+}
+
+aside > div {
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+aside > p {
+    margin-top: 16px;
+}
+
+.aside-account {
+    margin: 24px 0;
+    justify-content: flex-start;
+}
+
+aside img {
+    width: 32px;
+}
+
+/*====================*/
 
 @media (max-width: 935px) {
     aside {
@@ -172,8 +244,18 @@ aside {
     }
 }
 
+/* 
+===================
+    Divisória M    
+===================
+*/
+
+.header-mobile {
+    display: none;
+}
+
 @media (max-width: 614px) {
-    .page-content {
+    section {
         width: 100%;
         display: flex;
         flex-direction: column;
