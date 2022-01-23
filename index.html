@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <div class="header-content desktop-only">
             <div class="header-logo">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <div class="vertical-separator"></div>
@@ -30,7 +30,7 @@
                 <ion-icon name="person-outline"></ion-icon>
             </div>
         </div>
-        <div class="header-mobile">
+        <div class="header-content mobile-only">
             <ion-icon name="logo-instagram"></ion-icon>
             <img src="public/logo.png" alt="instagram-logo">
             <ion-icon name="paper-plane-outline"></ion-icon>
@@ -40,7 +40,7 @@
         <section class="page-content">
             <div class="stories-holder">
                 <div class="stories-post">
-                    <div><img src="public/gato-telefone 1.png" alt="profile"></div>
+                    <div><img class="profile" src="public/gato-telefone 1.png" alt="profile"></div>
                     <p>oi</p>
                 </div>
                 <div class="stories-post">
@@ -79,34 +79,41 @@
                     <div></div>
                     <p>oi</p>
                 </div>
-                <button onclick="console.log('oi')"><img src="public/Vector.png" alt="button"></ion-icon></button>
+                <button class="desktop-only" onclick="console.log('oi')"><img src="public/Vector.png" alt="button"></ion-icon></button>
             </div>
-            <div class="feed-holder">
+            <div>
                 <div class="feed-post">
                     <div class="feed-account">
                         <div>
-                            <img src="public/gato-telefone 1.png" alt="profile">
+                            <img class="profile" src="public/gato-telefone 1.png" alt="profile">
                             <p>telefonus catus</p>
                         </div>
                         <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                     </div>
-                    <img src="public/gato-telefone 1.png" alt="gato" />
+                    <video
+                        autoplay
+                        muted 
+                    >
+                        <source src="public/video.mp4" type="video/mp4">
+                        <source src="public/video.ogg" type="video/ogg">
+                        Seu navegador não suporta vídeo ;-;
+                    </video>
                     <div class="feed-info">
                         <div>
                             <div>
                                 <ion-icon name="heart-outline"></ion-icon>
-                                <ion-icon name="paper-plane-outline"></ion-icon>
                                 <ion-icon name="chatbubble-outline"></ion-icon>
+                                <ion-icon name="paper-plane-outline"></ion-icon>
                             </div>
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="bookmark-outline"></ion-icon>
                         </div>
-                        <img src="public/gato-telefone 1.png" alt="">
+                        <img class="profile" src="public/gato-telefone 1.png" alt="">
                     </div>
                 </div>
                 <div class="feed-post">
                     <div class="feed-account">
                         <div>
-                            <img src="public/gato-telefone 1.png" alt="profile">
+                            <img class="profile" src="public/gato-telefone 1.png" alt="profile">
                             <p>telefonus catus</p>
                         </div>
                         <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
@@ -116,22 +123,33 @@
                         <div>
                             <div>
                                 <ion-icon name="heart-outline"></ion-icon>
-                                <ion-icon name="paper-plane-outline"></ion-icon>
                                 <ion-icon name="chatbubble-outline"></ion-icon>
+                                <ion-icon name="paper-plane-outline"></ion-icon>
                             </div>
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="bookmark-outline"></ion-icon>
                         </div>
                         <div>
-                            <img src="public/gato-telefone 1.png" alt="">
+                            <img class="profile" src="public/gato-telefone 1.png" alt="">
                             <p>Curtido por ...</p>
                         </div>
+                        <p></p>
+                        <p></p>
+                        <div>
+
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="feed-comment">
+                        <ion-icon name="happy-outline"></ion-icon>
+                        <input placeholder="Adicione um comentário" type="text">
+                        <button>Publicar</button>
                     </div>
                 </div>
             </div>
         </section>
         <aside>
             <div class="aside-account">
-                <img src="public/gato-telefone 1.png" alt="">
+                <img class="profile" src="public/gato-telefone 1.png" alt="">
                 <p>
                     zagreatocactus
                     <br />
@@ -144,7 +162,7 @@
             </div>
             <div>
                 <div>
-                    <img src="public/gato-telefone 1.png" alt="">
+                    <img class="profile" src="public/gato-telefone 1.png" alt="">
                     <p>
                         Catzera Brabus
                         <br />
@@ -163,6 +181,15 @@
             </p>
         </aside>
     </div>
+    <nav>
+        <div class="header-content mobile-only">
+            <ion-icon name="home"></ion-icon>
+            <ion-icon name="search"></ion-icon>
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="person-outline"></ion-icon>
+        </div>
+    </nav>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

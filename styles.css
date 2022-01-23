@@ -7,7 +7,6 @@
 }
 
 body {
-    background-color: #fafafa;
     font-family: 'Roboto', sans-serif
 }
 
@@ -21,8 +20,17 @@ body, input {
     background-color: #fafafa;
 }
 
-header, .stories-holder, .feed-post {
+header, .stories-holder, .feed-post, nav {
     background-color: #ffffff;
+}
+
+header, header input, .stories-holder, .feed-post, nav {
+    border-color: #dbdbdb;
+    border-width: 1px;
+}
+
+.profile {
+    border-radius: 50%;
 }
 
 /* border color */
@@ -33,16 +41,21 @@ header, .stories-holder, .feed-post {
 ===================
 */
 
-header {
+header, nav {
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1;
-
     width: 100%;
-    padding: 0 20px;
+    padding: 0 20px;  
+}
 
-    border-bottom: 1px solid #dbdbdb;
+header {
+    top: 0;
+    border-bottom-style: solid
+}
+
+nav {
+    bottom: 0;
+    border-top-style: solid;
 }
 
 .header-content, .page-holder {
@@ -50,8 +63,7 @@ header {
     margin: 0 auto;
 }
 
-/* duas classes ou uma? */
-.header-content, .header-mobile {
+.header-content {
     height: 54px;
     display: flex;
     justify-content: space-between;
@@ -75,7 +87,7 @@ header {
 header input {
     width: 215px;
     height: 28px;
-    border: 1px solid #DBDBDB;
+    border-style: solid;
     border-radius: 3px;
 }
 
@@ -99,9 +111,13 @@ ion-icon {
     margin-top: 54px;
 }
 
-.stories-holder {
+section {
     width: 100%;
     max-width: 614px;
+}
+
+.stories-holder {
+    width: 100%;
     height: 118px;
     display: flex;
     gap: 14px;
@@ -109,7 +125,7 @@ ion-icon {
     padding-left: 18px;
     margin: 34px 0 24px 0;
     overflow: hidden;
-    border: 1px solid #dbdbdb;
+    border-style: solid
 }
 
 .stories-post {
@@ -128,17 +144,14 @@ ion-icon {
     align-items: center;
 }
 
-.stories-post img, .aside-account img, aside img, .feed-info img {
+.stories-post img, .aside-account img {
     width: 56px;
-    border-radius: 50%;
 }
 
 .stories-holder button {
     position: absolute;
     z-index: 0;
     margin-left: 569px;
-    display: flex;
-    align-items: center;
     background-color: #000000;
     border-radius: 50%;
     width: 26px;
@@ -147,11 +160,7 @@ ion-icon {
     border-style: none;
 }
 
-.feed-holder {
-    max-width: 614px;
-}
-
-.feed-holder img {
+.feed-post img, .feed-post video {
     width: 100%;
     display: block;
 }
@@ -159,15 +168,17 @@ ion-icon {
 .feed-post {
     width: 100%;
     margin-bottom: 60px;
-    border: 1px solid #dbdbdb
+    border-style: solid
+}
+
+.feed-post > div {
+    padding: 14px 17px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .feed-account {
-    height: 61px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 17px
 }
 
 .feed-account div {
@@ -176,7 +187,6 @@ ion-icon {
 
 .feed-account img {
     width: 32px;
-    border-radius: 50%;
 }
 
 .feed-account p {
@@ -184,12 +194,7 @@ ion-icon {
 }
 
 .feed-info {
-    height: 76px;
     font-size: 17px;
-    padding: 14px 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .feed-info > div {
@@ -199,6 +204,17 @@ ion-icon {
 
 .feed-info img {
     width: 20px;
+}
+
+.feed-comment {
+    display: flex;
+    border-top: 1px solid #efefef
+}
+
+.feed-comment input {
+    background-color: transparent;
+    border-style: none;
+    flex-grow: 1;
 }
 
 aside {
@@ -250,33 +266,22 @@ aside img {
 ===================
 */
 
-.header-mobile {
+.mobile-only {
     display: none;
 }
 
 @media (max-width: 614px) {
-    section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .stories-holder {
         margin: 0;
         border: none;
         background-color: #00000000;
     }
 
-    .stories-holder button {
+    .desktop-only {
         display: none
     }
 
-    .header-content {
-        display: none
-    }
-
-    .header-mobile {
+    .mobile-only {
         display: flex
     }
 }
