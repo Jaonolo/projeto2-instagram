@@ -151,7 +151,7 @@ section {
 .stories-holder button {
     position: absolute;
     z-index: 0;
-    margin-left: 569px;
+    margin-left: 558px;
     background-color: transparent;
     border-radius: 50%;
     font-size: 28px;
@@ -171,7 +171,7 @@ section {
 }
 
 .feed-container ion-icon {
-    font-size: 18px
+    font-size: 24px;
 }
 
 .feed-container {
@@ -281,9 +281,9 @@ aside img {
 }
 
 /* 
-===================
-    Divisória M    
-===================
+========================
+    Divisória MOBILE   
+========================
 */
 
 .mobile-only {
