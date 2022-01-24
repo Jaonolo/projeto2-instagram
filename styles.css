@@ -20,11 +20,11 @@ body, input {
     background-color: #fafafa;
 }
 
-header, .stories-holder, .feed-post, nav {
+header, .stories-holder, .feed-container, nav {
     background-color: #ffffff;
 }
 
-header, header input, .stories-holder, .feed-post, nav {
+header, header input, .stories-holder, .feed-container, nav {
     border-color: #dbdbdb;
     border-width: 1px;
 }
@@ -152,26 +152,35 @@ section {
     position: absolute;
     z-index: 0;
     margin-left: 569px;
-    background-color: #000000;
+    background-color: transparent;
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    font-size: 28px;
     padding: 0;
     border-style: none;
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
 }
 
-.feed-post img, .feed-post video {
+.stories-holder ion-icon {
+    display: block;
+}
+
+.feed-container img, .feed-container video {
     width: 100%;
     display: block;
 }
 
-.feed-post {
+.feed-container ion-icon {
+    font-size: 18px
+}
+
+.feed-container {
     width: 100%;
     margin-bottom: 60px;
     border-style: solid
 }
 
-.feed-post > div {
+.feed-container > div {
     padding: 14px 17px;
     justify-content: space-between;
     align-items: center;
@@ -215,6 +224,17 @@ section {
     background-color: transparent;
     border-style: none;
     flex-grow: 1;
+}
+
+.feed-comment button {
+    color: #B2DFFC;
+    background-color: transparent;
+    border: none;
+    transition: 300ms
+}
+
+.feed-comment button:hover {
+    color: #0095F6
 }
 
 aside {
